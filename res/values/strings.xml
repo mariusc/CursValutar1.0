@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="app_name">Curs Valutar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string-array name="valuta_array">
+        <item>AED</item>
+        <item>AUD</item>
+        <item>BGN</item>
+        <item>BRL</item>
+        <item>CAD</item>
+        <item>CHF</item>
+        <item>CNY</item>
+        <item>CZK</item>
+        <item>DKK</item>
+        <item>EGP</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>HUF</item>
+        <item>INR</item>
+        <item>JPY</item>
+        <item>KRW</item>
+        <item>MDL</item>
+        <item>MXN</item>
+        <item>NOK</item>
+        <item>NZD</item>
+        <item>PLN</item>
+        <item>RON</item>
+        <item>RSD</item>
+        <item>RUB</item>
+        <item>SEK</item>
+        <item>TRY</item>
+        <item>UAH</item>
+        <item>USD</item>
+        <item>XAU</item>
+        <item>XDR</item>
+        <item>ZAR</item>
+    </string-array>
+
+</resources>
