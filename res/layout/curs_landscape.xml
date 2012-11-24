@@ -13,17 +13,17 @@
 			android:id="@+id/lista_stanga"
 			android:layout_width="350dip"
 			android:layout_height="wrap_content"
-			android:cacheColorHint="#e6e6e6"
 			android:paddingLeft="10dip"
 			android:choiceMode="singleChoice"
+			android:cacheColorHint="#e7cfc7"
 		/>
 	    <ListView
 			android:id="@+id/lista_dreapta"
 			android:layout_width="350dip"
 			android:layout_height="wrap_content"
-			android:cacheColorHint="#e6e6e6"
 			android:paddingLeft="10dip"
-			android:background="#e7cfc7"
+			android:choiceMode="singleChoice"
+			android:cacheColorHint="#e7cfc7"
 		/>
 	</LinearLayout>
 	

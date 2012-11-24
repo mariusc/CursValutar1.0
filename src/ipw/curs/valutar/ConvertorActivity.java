@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ConvertorActivity extends Activity {
 
@@ -38,9 +39,18 @@ public class ConvertorActivity extends Activity {
 	
 	public void convert(View button)
 	{
-		//System.out.println("sunt selectate " + MyOnItemSelectedListener.selected1 + " si " + MyOnItemSelectedListener.selected2);
+		System.out.println("sunt selectate " + MyOnItemSelectedListener.selected1 + " si " + MyOnItemSelectedListener.selected2);
 		EditText et = (EditText) findViewById(R.id.sumaInitiala);
-		float sumaInitiala = Float.parseFloat(et.getText().toString());
+		float sumaInitiala = 0;
+		try
+		{
+			sumaInitiala = Float.parseFloat(et.getText().toString());
+		}
+		catch (NumberFormatException nfe)
+		{
+			Toast.makeText(this, "Introdu o suma valida pentru conversie", Toast.LENGTH_SHORT).show();
+			return;
+		}
 		System.out.println(sumaInitiala);
 		System.out.println("Am de transformat " + sumaInitiala + " " + MyOnItemSelectedListener.selected1 + " in " + MyOnItemSelectedListener.selected2);
 		
@@ -50,13 +60,17 @@ public class ConvertorActivity extends Activity {
 		{
 			if (v.nume.equalsIgnoreCase(MyOnItemSelectedListener.selected1))
 				valuta1 = v;
-			else if (v.nume.equalsIgnoreCase(MyOnItemSelectedListener.selected2))
+			if (v.nume.equalsIgnoreCase(MyOnItemSelectedListener.selected2))
 				valuta2 = v;
 		}
-		
+		System.out.println("valuta 1: " + valuta1);
+		System.out.println("valuta 2: " + valuta2);
 		float rezultat = sumaInitiala * valuta1.nr_curs / valuta2.nr_curs; 
 		TextView tv = (TextView)findViewById(R.id.rezultat);
 		tv.setText(rezultat + "");
+//		EditText tv = (EditText)findViewById(R.id.rezultat);
+//		tv.setKeyListener(null);
+//		tv.setText(rezultat + "");
 	}
 	
 }
